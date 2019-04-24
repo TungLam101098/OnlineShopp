@@ -1,0 +1,277 @@
+<!-- wpf loader Two -->
+<div id="wpf-loader-two">          
+  <div class="wpf-loader-two-inner">
+    <span>Loading</span>
+  </div>
+</div> 
+<!-- / wpf loader Two -->  
+
+<!-- SCROLL TOP BUTTON -->
+<a class="scrollToTop" routerLink="#"><i class="fa fa-chevron-up"></i></a>
+<!-- END SCROLL TOP BUTTON -->
+
+<header id="aa-header">
+  <!-- start header top  -->
+  <div class="aa-header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-top-area">
+            <!-- start header top left -->
+            <div class="aa-header-top-left">
+              <!-- start language -->
+              <div class="aa-language">
+                <div class="dropdown">
+                  <a class="btn dropdown-toggle" routerLink="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <img src="assets/img/flag/english.jpg" alt="english flag">ENGLISH
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a routerLink="#"><img src="assets/img/flag/french.jpg" alt="">FRENCH</a></li>
+                    <li><a routerLink="#"><img src="assets/img/flag/english.jpg" alt="">ENGLISH</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- / language -->
+
+              <!-- start currency -->
+              <div class="aa-currency">
+                <div class="dropdown">
+                  <a class="btn dropdown-toggle" routerLink="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    <i class="fa fa-usd"></i>USD
+                    <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a routerLink="#"><i class="fa fa-euro"></i>EURO</a></li>
+                    <li><a routerLink="#"><i class="fa fa-jpy"></i>YEN</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- / currency -->
+              <!-- start cellphone -->
+              <div class="cellphone hidden-xs">
+                <p><span class="fa fa-phone"></span>00-62-658-658</p>
+              </div>
+              <!-- / cellphone -->
+            </div>
+            <!-- / header top left -->
+            <div class="aa-header-top-right">
+              <ul class="aa-head-top-nav-right">
+                <li><a routerLink="/account" *ngIf="!isLogin">My Account</a></li>
+                <li><a routerLink="/account"*ngIf="isLogin"><span>Hello </span>{{name}}</a></li>
+                <li class="hidden-xs"><a routerLink="/wishlist">Wishlist</a></li>
+                <li class="hidden-xs"><a routerLink="/cart">My Cart</a></li>
+                <li class="hidden-xs"><a routerLink="/checkout">Checkout</a></li>
+                <li class="hidden-xs" *ngIf="!isLogin"><a routerLink="/login" >Login</a></li>
+                <li class="hidden-xs" *ngIf="isLogin"><a routerLink="/" (click)="isLogOut()">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / header top  -->
+
+  <!-- start header bottom  -->
+  <div class="aa-header-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-bottom-area">
+            <!-- logo  -->
+            <div class="aa-logo">
+              <!-- Text based logo -->
+              <a routerLink="/">
+                <span class="fa fa-shopping-cart"></span>
+                <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
+              </a>
+              <!-- img based logo -->
+              <!-- <a routerLink="index.html"><img src="img/logo.jpg" alt="logo img"></a> -->
+            </div>
+            <!-- / logo  -->
+             <!-- cart box -->
+            <div class="aa-cartbox">
+              <a class="aa-cart-link" routerLink="#">
+                <span class="fa fa-shopping-basket"></span>
+                <span class="aa-cart-title">SHOPPING CART</span>
+                <span class="aa-cart-notify">2</span>
+              </a>
+              <div class="aa-cartbox-summary">
+                <ul>
+                  <li>
+                    <a class="aa-cartbox-img" routerLink="#"><img src="assets/img/woman-small-2.jpg" alt="img"></a>
+                    <div class="aa-cartbox-info">
+                      <h4><a routerLink="#">Product Name</a></h4>
+                      <p>1 x $250</p>
+                    </div>
+                    <a class="aa-remove-product" routerLink="#"><span class="fa fa-times"></span></a>
+                  </li>
+                  <li>
+                    <a class="aa-cartbox-img" routerLink="#"><img src="assets/img/woman-small-1.jpg" alt="img"></a>
+                    <div class="aa-cartbox-info">
+                      <h4><a routerLink="#">Product Name</a></h4>
+                      <p>1 x $250</p>
+                    </div>
+                    <a class="aa-remove-product" routerLink="#"><span class="fa fa-times"></span></a>
+                  </li>                    
+                  <li>
+                    <span class="aa-cartbox-total-title">
+                      Total
+                    </span>
+                    <span class="aa-cartbox-total-price">
+                      $500
+                    </span>
+                  </li>
+                </ul>
+                <a class="aa-cartbox-checkout aa-primary-btn" routerLink="/checkout">Checkout</a>
+              </div>
+            </div>
+            <!-- / cart box -->
+            <!-- search box -->
+            <div class="aa-search-box">
+              <form action="">
+                <input type="text" name="" id="" placeholder="Search here ex. 'man' ">
+                <button type="submit"><span class="fa fa-search"></span></button>
+              </form>
+            </div>
+            <!-- / search box -->             
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / header bottom  -->
+</header>
+
+
+ <!-- menu -->
+ <section id="menu">
+  <div class="container">
+    <div class="menu-area">
+      <!-- Navbar -->
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>          
+        </div>
+        <div class="navbar-collapse collapse">
+          <!-- Left nav -->
+          <ul class="nav navbar-nav">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="#">Men <span class="caret"></span></a>
+              <ul class="dropdown-menu">                
+                <li><a routerLink="/menCasual">Casual</a></li>
+                <li><a routerLink="/menSports">Sports</a></li>
+                <li><a routerLink="/menFormal">Formal</a></li>                                               
+                <li><a routerLink="/menTshirts">T-Shirts</a></li>
+                <li><a routerLink="/menShirts">Shirts</a></li>
+                <li><a routerLink="/menJeans">Jeans</a></li>
+                <li><a routerLink="/menTrousers">Trousers</a></li>
+                <li><a routerLink="#">And more.. <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a routerLink="/menSleepWear">Sleep Wear</a></li>
+                    <li><a routerLink="/menSandals">Sandals</a></li>
+                    <li><a routerLink="/menLoadfers">Loafers</a></li>                                      
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a routerLink="#">Women <span class="caret"></span></a>
+              <ul class="dropdown-menu">  
+                <li><a routerLink="/womenkurta&kurti">Kurta & Kurti</a></li>                                                                
+                <li><a routerLink="/womenTrousers">Trousers</a></li>              
+                <li><a routerLink="/womenCasual">Casual</a></li>
+                <li><a routerLink="/womenSports">Sports</a></li>
+                <li><a routerLink="/womenFormal">Formal</a></li>                
+                <li><a routerLink="/womenSarees">Sarees</a></li>
+                <li><a routerLink="/womenShoes">Shoes</a></li>
+                <li><a routerLink="#">And more.. <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a routerLink="/womenSleepwear">Sleep Wear</a></li>
+                    <li><a routerLink="/womenSandals">Sandals</a></li>
+                    <li><a routerLink="/womenLoadfers">Loafers</a></li>
+                    <li><a routerLink="#">And more.. <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a routerLink="/womenRings">Rings</a></li>
+                        <li><a routerLink="/womenEarrings">Earrings</a></li>
+                        <li><a routerLink="/womenJewellerySets">Jewellery Sets</a></li>
+                        <li><a routerLink="/womenLockets">Lockets</a></li>
+                        <li class="disabled"><a class="disabled" routerLink="/womenDisabled">Disabled item</a></li>                       
+                        <li><a routerLink="/womenJeans">Jeans</a></li>
+                        <li><a routerLink="/womenPoloT-Shirts">Polo T-Shirts</a></li>
+                        <li><a routerLink="/womenSKirts">SKirts</a></li>
+                        <li><a routerLink="/womenJackets">Jackets</a></li>
+                        <li><a routerLink="/womenTops">Tops</a></li>
+                        <li><a routerLink="/womenMakeUp">Make Up</a></li>
+                        <li><a routerLink="/womenHairCare">Hair Care</a></li>
+                        <li><a routerLink="/womenPerfumes">Perfumes</a></li>
+                        <li><a routerLink="/womenSkinCare">Skin Care</a></li>
+                        <li><a routerLink="/womenHandBags">Hand Bags</a></li>
+                        <li><a routerLink="/womenSingleBags">Single Bags</a></li>
+                        <li><a routerLink="/womenTravelBags">Travel Bags</a></li>
+                        <li><a routerLink="/womenWallets&Belts">Wallets & Belts</a></li>                        
+                        <li><a routerLink="/womenSunglases">Sunglases</a></li>
+                        <li><a routerLink="/womenNail">Nail</a></li>                       
+                      </ul>
+                    </li>                   
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a routerLink="#">Kids <span class="caret"></span></a>
+              <ul class="dropdown-menu">                
+                <li><a routerLink="/kidsCasual">Casual</a></li>
+                <li><a routerLink="/kidsSports">Sports</a></li>
+                <li><a routerLink="/kidsFormal">Formal</a></li>
+                <li><a routerLink="/kidsStandard">Standard</a></li>                                                
+                <li><a routerLink="/kidsT-Shirts">T-Shirts</a></li>
+                <li><a routerLink="/kidsShirts">Shirts</a></li>
+                <li><a routerLink="/kidsJeans">Jeans</a></li>
+                <li><a routerLink="/kidsTrousers">Trousers</a></li>
+                <li><a routerLink="#">And more.. <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a routerLink="/kidsSleepWear">Sleep Wear</a></li>
+                    <li><a routerLink="/kidsSandals">Sandals</a></li>
+                    <li><a routerLink="/kidsLoafers">Loafers</a></li>                                      
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a routerLink="/Sports">Sports</a></li>
+           <li><a routerLink="#">Digital <span class="caret"></span></a>
+              <ul class="dropdown-menu">                
+                <li><a routerLink="/Camera">Camera</a></li>
+                <li><a routerLink="/Mobile">Mobile</a></li>
+                <li><a routerLink="/Tablet">Tablet</a></li>
+                <li><a routerLink="/Laptop">Laptop</a></li>                                                
+                <li><a routerLink="/Accesories">Accesories</a></li>                
+              </ul>
+            </li>
+            <li><a routerLink="/Furniture">Furniture</a></li>            
+            <li><a routerLink="blog-archive.html">Blog <span class="caret"></span></a>
+              <ul class="dropdown-menu">                
+                <li><a routerLink="/BlogStyle1">Blog Style 1</a></li>
+                <li><a routerLink="/BlogStyle2">Blog Style 2</a></li>
+                <li><a routerLink="/BlogSingle">Blog Single</a></li>                
+              </ul>
+            </li>
+            <li><a routerLink="/Contact">Contact</a></li>
+            <li><a routerLink="#">Pages <span class="caret"></span></a>
+              <ul class="dropdown-menu">                
+                <li><a routerLink="/ShopPage">Shop Page</a></li>
+                <li><a routerLink="/ShopSingle">Shop Single</a></li>                
+                <li><a routerLink="/**">404 Page</a></li>                
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>       
+  </div>
+</section>
+<!-- / menu -->
